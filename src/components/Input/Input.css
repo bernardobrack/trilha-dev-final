@@ -1,0 +1,11 @@
+.text-input {
+    border-radius: 1.2rem;
+    width: 29.6rem;
+    height: 5.3rem;
+    border: 1px solid var(--gray-ink);
+    text-indent: 1rem;
+}
+
+.text-input:focus {
+    outline: none;
+}
