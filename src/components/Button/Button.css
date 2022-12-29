@@ -10,3 +10,16 @@
 .btn:focus {
     outline: none;
 }
+
+.btn-large {
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+.btn-medium {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+.btn-small {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
