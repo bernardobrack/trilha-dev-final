@@ -1,0 +1,10 @@
+.btn-prev {
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4.5rem;
+    border: 1px solid var(--gray-ink);
+    
+}

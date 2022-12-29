@@ -1,0 +1,14 @@
+.btn-small {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--dark-gray-ink);
+    max-width: 4.5rem;
+}
+
+.btn-small.center {
+    text-align: center;
+}
+
+.btn-small.right {
+    text-align: right;
+}
