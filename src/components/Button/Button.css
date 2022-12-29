@@ -1,0 +1,12 @@
+.btn {
+    width: 55.2rem;
+    height: 5.6rem;
+    border-radius: 1.6rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white-ink);
+}
+
+.btn:focus {
+    outline: none;
+}

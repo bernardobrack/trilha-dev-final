@@ -1,0 +1,65 @@
+:root {
+    font-size: 10px;
+    --primary-color: #82327E;
+    --secondary-color: #65AAEA;
+    --success-color: #5BA092;
+    --error-color: #EF4949;
+    --warning-color: #F2A03F;
+    --dark-ink: #3C3A36;
+    --dark-gray-ink: #78746D;
+    --gray-ink: #BEBAB3;
+    --light-gray-ink: #FFF5EE;
+    --white-ink: #FFFFFF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 5.6rem;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 3.2rem;
+}
+
+
+h4 {
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+h5 {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+p.p-large {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+p.p-medium {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+p.p-small {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
