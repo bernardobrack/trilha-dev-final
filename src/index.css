@@ -21,6 +21,10 @@
 
 body {
     font-size: 1.6rem;
+    color: var(--dark-ink);
+    text-align: center;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 h1 {
