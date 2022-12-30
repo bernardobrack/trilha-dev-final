@@ -7,10 +7,11 @@ export default function PasswordInput(props) {
 
     const {placeholder, children, className, type, ...rest} = props;
 
+    const imageSrc = isVisible ? "src/assets/invisible-password-icon.svg" : "src/assets/password-visibility-icon.svg";
     const inputType = isVisible ? "text" : "password";
     const actualPlaceholder = placeholder ? placeholder : "Password";
     return <div className="password-input-div">
         <input placeholder={actualPlaceholder} type={inputType} className={`password-input ${className}`} {...rest}/>
-        <img onClick={() => setIsVisible(prev => !prev)} className="toggle-pwd-vision" src="src\assets\password-visibility-icon.svg"/>
+        <img onClick={() => setIsVisible(prev => !prev)} className="toggle-pwd-vision" src={imageSrc}/>
     </div> 
 }
