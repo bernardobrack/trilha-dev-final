@@ -11,16 +11,19 @@ import RecoverPassword from './components/RecoverPassword/RecoverPassword'
 import Register from './components/Register/Register'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import Home from './components/Home/Home'
+import { useContext } from 'react'
+import { AppContext } from './components/AppProvider/AppProvider'
 
 function App() {
-
+  
+  const {user} = useContext(AppContext);
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<LoginPage />}/>
         <Route path="/recover-password" element={<RecoverPassword />}/>
         <Route path="/register" element={<Register />}/>
-        <Route path="/home"element={<ProtectedRoute>
+        <Route path="/home"element={<ProtectedRoute user={user}>
           <Home></Home>
         </ProtectedRoute>}>
 

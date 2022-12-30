@@ -3,8 +3,9 @@ import Input from "../Input/Input";
 import PasswordInput from "../PasswordInput/PasswordInput";
 import SmallButton from "../SmallButton/SmallButton";
 import "./LoginForm.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../AppProvider/AppProvider";
 
 export default function LoginForm() {
     const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ export default function LoginForm() {
     });
     
     const navigate = useNavigate();
-    
+    const {user, setUser} = useContext(AppContext);
     function handleFormChange(event) {
         const {name, value} = event.target;
         
@@ -24,6 +25,9 @@ export default function LoginForm() {
     }
     function handleLoginSubmit(event) {
         event.preventDefault();
+        setUser({
+            email: formData.email
+        });
         navigate("/home");
     }
     return <div id="login-form-div">
