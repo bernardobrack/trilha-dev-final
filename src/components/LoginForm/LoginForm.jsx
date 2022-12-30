@@ -24,6 +24,7 @@ export default function LoginForm() {
     }
     function handleLoginSubmit(event) {
         event.preventDefault();
+        navigate("/home");
     }
     return <div id="login-form-div">
         <h1>Entrar</h1>
