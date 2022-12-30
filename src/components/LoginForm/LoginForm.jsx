@@ -6,13 +6,14 @@ import "./LoginForm.css";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../AppProvider/AppProvider";
+import useSWRMutation from "swr/mutation";
 
 export default function LoginForm() {
     const [formData, setFormData] = useState({
         "email": "",
         "pwd": ""
     });
-    
+    const { trigger } = useSWRMutation("https://my-json-server.typicode.com/higorpo/trilha-dev-json-server/profile", getUser);
     const navigate = useNavigate();
     const {user, setUser} = useContext(AppContext);
     function handleFormChange(event) {
@@ -25,10 +26,15 @@ export default function LoginForm() {
     }
     function handleLoginSubmit(event) {
         event.preventDefault();
-        setUser({
-            email: formData.email
+        trigger();
+    }
+    function getUser(url) {
+        fetch(url)
+        .then(r => r.json())
+        .then(data => {
+            setUser(data)
+            navigate("/home");
         });
-        navigate("/home");
     }
     return <div id="login-form-div">
         <h1>Entrar</h1>
