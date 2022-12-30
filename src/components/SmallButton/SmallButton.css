@@ -11,3 +11,7 @@
 .btn-small.right {
     text-align: right;
 }
+
+.btn-small:hover {
+    cursor: pointer;
+}

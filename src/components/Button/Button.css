@@ -7,6 +7,9 @@
     color: var(--white-ink);
 }
 
+.btn:hover {
+    cursor: pointer;
+}
 .btn:focus {
     outline: none;
 }
@@ -18,4 +21,10 @@
 .btn-medium {
     font-weight: 500;
     font-size: 1.6rem;
+}
+.btn-large:hover {
+    cursor: pointer;
+}
+.btn-medium:hover {
+    cursor: pointer;
 }
