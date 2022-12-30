@@ -32,7 +32,7 @@ export default function LoginForm() {
             <PasswordInput required onChange={handleFormChange} name="pwd" value={formData.pwd} className="login-form-field" />
             <SmallButton onClick={() => navigate("/recover-password")} className="btn-medium">Esqueceu sua senha?</SmallButton>
             <Button type="submit">Entrar</Button>
-            <SmallButton className="btn-medium">Criar uma conta</SmallButton>
+            <SmallButton onClick={() => navigate("/register")} className="btn-medium">Criar uma conta</SmallButton>
         </form>
     </div>
 }

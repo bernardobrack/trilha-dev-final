@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom"
 import LoginPage from './components/LoginPage/LoginPage.jsx'
 import NotFound from './components/NotFound/NotFound'
 import RecoverPassword from './components/RecoverPassword/RecoverPassword'
+import Register from './components/Register/Register'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />}/>
         <Route path="/recover-password" element={<RecoverPassword />}/>
+        <Route path="/register" element={<Register />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

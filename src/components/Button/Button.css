@@ -9,6 +9,7 @@
 
 .btn:hover {
     cursor: pointer;
+    background-color: #5E235B;
 }
 .btn:focus {
     outline: none;
