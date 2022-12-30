@@ -1,9 +1,9 @@
 import { AppContext } from "../AppProvider/AppProvider"
 import { useContext } from "react"
+import Header from "../Header/Header";
 
 export default function Home() {
     
     const { user } = useContext(AppContext);
-    console.log(user);
-    return <p>Protected Route</p>
+    return <Header user={user}/>
 }
