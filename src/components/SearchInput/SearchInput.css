@@ -1,0 +1,23 @@
+.search-input-div {
+    display: flex;
+    align-items: center;
+    width: 40.4rem;
+    height: 5.6rem;
+    border: 1px solid var(--gray-ink);
+    border-radius: 12px;
+}
+.search-input-div > img {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 1.6rem;
+}
+.search-input {
+    border: none;
+    height: 100%;
+    margin: 1.6rem;
+    width: calc(100% - 2.4rem);
+}
+
+.search-input:focus {
+    outline: none;
+}

@@ -3,7 +3,7 @@ import "./LoginPage.css";
 
 export default function LoginPage() {
     return <div id="login-page-div">
-        <div id="login-page-imgage-div">
+        <div id="login-page-image-div">
             <img id="login-page-image" src="src\assets\login-image.svg" alt="Pixel Quizzes Logo" />
         </div>
         <LoginForm />
