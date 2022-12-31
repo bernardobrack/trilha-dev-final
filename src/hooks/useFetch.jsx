@@ -6,6 +6,6 @@ const fetcher = (url) => {
 }
 
 export const useFetch = (relativeUrl) => {
-    const { data } = useSWR(relativeUrl, () => fetcher(`https://my-json-server.typicode.com/higorpo/trilha-dev-json-server/${relativeUrl}`));
-    return { data };
+    const { data, error, isLoading } = useSWR(relativeUrl, () => fetcher(`https://my-json-server.typicode.com/higorpo/trilha-dev-json-server/${relativeUrl}`));
+    return { data, error, isLoading };
 }
