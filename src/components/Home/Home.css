@@ -3,3 +3,16 @@
     max-width: 144rem;
     min-height: 100vh;
 }
+
+#home-page-grid {
+    box-sizing: content-box;
+    display: grid;
+    max-width: 120rem;
+    min-width: 100rem;
+}
+
+#home-page-content {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
