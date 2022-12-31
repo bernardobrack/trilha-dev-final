@@ -13,6 +13,8 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import Home from './components/Home/Home'
 import { useContext } from 'react'
 import { AppContext } from './components/AppProvider/AppProvider'
+import HomeContent from './components/HomeContent/HomeContent'
+import HistoryPage from './components/HistoryPage/HistoryPage'
 
 function App() {
   
@@ -26,8 +28,10 @@ function App() {
         <Route path="/home"element={<ProtectedRoute user={user}>
           <Home></Home>
         </ProtectedRoute>}>
-
         </Route>
+        <Route path="/history" element={<ProtectedRoute user={user}>
+            <HistoryPage />
+          </ProtectedRoute>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

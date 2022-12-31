@@ -10,7 +10,7 @@ export default function Home() {
     const { user } = useContext(AppContext);
     const { data, error, isLoading } = useFetch('quizzes');
     console.log(data);
-    return <div className="home-page">
+    return <div className="page-content">
         <Header user={user}/>
         <div id="home-page-content">
             <section className="grid" id="home-page-grid">
