@@ -11,7 +11,7 @@ export default function Header({ user }) {
             <div id="header-navigation-container">
                 <p className="p-medium">Histórico</p>
                 <p className="p-medium">Temas</p>
-                <SearchInput />
+                <SearchInput placeholder="Pesquisar quiz"/>
             </div>
         </div>
     </header>

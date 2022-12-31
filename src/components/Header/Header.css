@@ -1,8 +1,11 @@
 header {
     border-bottom: 1px solid var(--gray-ink);
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content:center;
+    align-items: center;
+    height: 120px;
+    width: 100vw;
+
 }
 
 #header-navigation-container {
@@ -10,23 +13,26 @@ header {
     justify-content: space-between;
     align-items: flex-end;
     gap: 3rem;
+    height: 100%;
 }
 #header-navigation-container > p:hover {
     cursor: pointer;
+}
+#header-navigation-container > p {
+    margin-bottom: 0.5rem;
 }
 #header-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     max-width: 120rem;
-    gap: 25.9rem;
-    margin-bottom: 2.6rem;
-    height: 12rem;
+    min-width: 100rem;
 }
 #header-name-div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-end;
 }
 
 header h2 {
