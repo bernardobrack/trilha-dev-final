@@ -11,7 +11,9 @@ header {
     align-items: flex-end;
     gap: 3rem;
 }
-
+#header-navigation-container > p:hover {
+    cursor: pointer;
+}
 #header-content {
     display: flex;
     justify-content: space-between;

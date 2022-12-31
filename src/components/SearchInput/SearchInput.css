@@ -11,6 +11,9 @@
     height: 2.4rem;
     margin: 1.6rem;
 }
+.search-input-div > img:hover {
+    cursor: pointer;
+}
 .search-input {
     border: none;
     height: 100%;
