@@ -10,8 +10,8 @@ export default function QuizCard(props) {
             style={{backgroundImage: `url(${quizInfo.banner_image})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
         </div>
         <div className="quiz-info-div">
-            <h4>Quiz Title</h4>
-            <p className="p-medium">Quiz description</p>
+            <h4>{quizInfo.title}</h4>
+            <p className="p-medium">{quizInfo.short_description}</p>
         </div>
     </div>
 }
