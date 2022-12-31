@@ -7,6 +7,6 @@ export default function NotFound() {
     
     return <div id="page-not-found-div">
         <h1>Page Not Found</h1>
-        <Button onClick={() => navigate("/")}>Go Back</Button>
+        <Button onClick={() => navigate("/home")}>Go Back</Button>
     </div>
 }
