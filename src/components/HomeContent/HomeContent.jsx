@@ -7,8 +7,8 @@ import QuizNotFound from "../QuizNotFound/QuizNotFound";
 import Loader from "../Loader/Loader";
 
 export default function HomeContent() {
-    const [params, setParams] = useSearchParams();
-    const { data, error, isLoading, isMutating } = useSWR( params.get("search") ? `quizzes?search=${params.get("search")}` : 'quizzes', fetcher);
+    const [params] = useSearchParams();
+    const { data } = useSWR( params.get("search") ? `quizzes?search=${params.get("search")}` : 'quizzes', fetcher);
     return <div id="home-page-content">
         {data && data.length>0 && <section className="grid" id="home-page-grid">
             {data.map(quiz => <QuizCard key={quiz.id} quizInfo={quiz}/>)}
