@@ -1,10 +1,13 @@
 import "./Header.css";
 import SearchInput from "../SearchInput/SearchInput";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useState } from "react";
 
-export default function Header({ user }) {
-    
+export default function Header(props) {
     const navigate = useNavigate();
+    const [params, setParams] = useSearchParams();
+    const [search, setSearch] = useState("");
+    const { user } = props;
     return <header>
         <div className="header-content">
             <div className="header-info-div">
@@ -14,7 +17,9 @@ export default function Header({ user }) {
             <div id="header-navigation-container">
                 <p onClick={() => navigate('/history')} className="p-medium">Histórico</p>
                 <p className="p-medium">Temas</p>
-                <SearchInput placeholder="Pesquisar quiz"/>
+                <SearchInput onSearch={() => {
+                    setParams({search: `${search}`});
+                }} value={search} onChange={e => setSearch(e.target.value)} placeholder="Pesquisar quiz"/>
             </div>
         </div>
     </header>
