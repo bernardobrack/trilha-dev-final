@@ -12,6 +12,9 @@
     width: 55.2rem;
     height: 19.4rem;
     border: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .quiz-info-div {

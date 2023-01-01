@@ -5,5 +5,7 @@ export default function PrevButton(props) {
 
     return <div 
     className={`btn-prev ${className}`} 
-    {...rest}>{"<"}</div>
+    {...rest}>
+        <img src="src/assets/go-back-icon.svg" alt="<" />
+    </div>
 }

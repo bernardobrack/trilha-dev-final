@@ -21,14 +21,14 @@ header {
 #header-navigation-container > p {
     margin-bottom: 0.5rem;
 }
-#header-content {
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 114.4rem;
     
 }
-#header-name-div {
+.header-info-div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

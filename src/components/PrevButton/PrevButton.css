@@ -8,3 +8,7 @@
     border: 1px solid var(--gray-ink);
     
 }
+
+.btn-prev:hover {
+    cursor: pointer;
+}
