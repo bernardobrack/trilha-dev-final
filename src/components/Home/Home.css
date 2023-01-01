@@ -1,6 +1,10 @@
 #home-page-content {
     width: 100vw;
-    margin: 4.8rem 0;
     display: flex;
     justify-content: center;
+    min-height: calc(100vh - 12rem);
+}
+
+#home-page-grid {
+    margin: 4.8rem 0;
 }

@@ -1,0 +1,17 @@
+#quiz-not-found-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+    justify-content: center;
+}
+#quiz-not-found-text {
+    max-width: 34.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#quiz-not-found-text > p {
+    color: var(--dark-gray-ink);
+}
