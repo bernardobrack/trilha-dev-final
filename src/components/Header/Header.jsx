@@ -8,6 +8,9 @@ export default function Header(props) {
     const [params, setParams] = useSearchParams();
     const [search, setSearch] = useState("");
     const { user } = props;
+    function handleSearchChange(e) {
+        setSearch(e.target.value);
+    }
     return <header>
         <div className="header-content">
             <div className="header-info-div">
@@ -17,9 +20,11 @@ export default function Header(props) {
             <div id="header-navigation-container">
                 <p onClick={() => navigate('/history')} className="p-medium">Histórico</p>
                 <p className="p-medium">Temas</p>
-                <SearchInput onSearch={() => {
+                <SearchInput onKeyDown={e => {
+                    if(e.key === "Enter") setParams({search: `${search}`})
+                }}onSearch={() => {
                     setParams({search: `${search}`});
-                }} value={search} onChange={e => setSearch(e.target.value)} placeholder="Pesquisar quiz"/>
+                }} value={search} onChange={handleSearchChange} placeholder="Pesquisar quiz"/>
             </div>
         </div>
     </header>
