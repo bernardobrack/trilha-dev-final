@@ -1,15 +1,23 @@
 import "./Header.css";
 import SearchInput from "../SearchInput/SearchInput";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import debounce from "lodash.debounce";
 
 export default function Header(props) {
     const navigate = useNavigate();
     const [params, setParams] = useSearchParams();
     const [search, setSearch] = useState("");
+    const debouncedSearch = useCallback(
+		debounce(value => {
+            setParams(prev => ({...prev, search: value}));
+        }, 500),
+		[],
+	);
     const { user } = props;
     function handleSearchChange(e) {
         setSearch(e.target.value);
+        debouncedSearch(e.target.value);
     }
     return <header>
         <div className="header-content">
