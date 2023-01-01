@@ -1,0 +1,10 @@
+.quiz-history {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 3.2rem);
+    margin: 0 1.6rem;
+}
+
+.quiz-history-date {
+    color: var(--dark-gray-ink);
+}
