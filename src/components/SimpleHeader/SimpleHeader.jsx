@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import PrevButton from "../PrevButton/PrevButton"
 import "./SimpleHeader.css";
+import "../Header/Header.css";
+
 export default function SimpleHeader(props) {
     const navigate = useNavigate();
     const { onPrevClick, isHistory } = props;

@@ -1,0 +1,33 @@
+.quiz-detail-div {
+    max-width: 55.2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem
+}
+.about-quiz,
+.questions-amout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.quiz-detail-div > h2 {
+    text-align: center;
+}
+
+#detail-image {
+    width: 55.3rem;
+    height: 37.9rem;
+}
+#detail-image-div {
+    width: 55.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+}
+
+#detail-difficulty {
+    margin: 0;
+    width: 7.2rem;
+}

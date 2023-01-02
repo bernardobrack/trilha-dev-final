@@ -13,9 +13,8 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import Home from './components/Home/Home'
 import { useContext } from 'react'
 import { AppContext } from './components/AppProvider/AppProvider'
-import HomeContent from './components/HomeContent/HomeContent'
 import HistoryPage from './components/HistoryPage/HistoryPage'
-import SimpleHeader from './components/SimpleHeader/SimpleHeader'
+import QuizDetailPage from './components/QuizDetails/QuizDetailPage'
 
 function App() {
   const {user} = useContext(AppContext);
@@ -28,9 +27,7 @@ function App() {
         <Route element={<ProtectedRoute user={user}/>}>
           <Route path="/home" element={<Home/>}/>
           <Route path="/history" element={<HistoryPage />}/>
-          <Route path="/details/:id" element={<SimpleHeader onPrevClick="/home"/>}>
-
-          </Route>
+          <Route path="/details/:id" element={<QuizDetailPage />}/>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
