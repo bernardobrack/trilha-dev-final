@@ -1,0 +1,33 @@
+.option-div {
+    background: var(--white-ink);
+    border: 1px solid var(--gray-ink);
+    border-radius: 8px;
+    width: 55.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--dark-ink);
+}
+
+.option-content {
+    display: flex;
+    text-align: start;
+    margin: 1.6rem 2.4rem;
+    gap: 1.6rem;
+}
+
+.option-div:hover {
+    cursor: pointer;
+}
+
+.correct {
+    background: var(--light-gray-ink);
+    border: 2px solid var(--success-color);
+    border-radius: 8px;
+}
+
+.wrong {
+    background: var(--light-gray-ink);
+    border: 2px solid var(--error-color);
+    border-radius: 8px;
+}
