@@ -4,7 +4,6 @@ import Difficulty from "../Difficulty/Difficulty";
 
 export default function QuizDetail(props) {
     const { quizInfo, children } = props;
-    console.log(quizInfo)
     return <div className="quiz-detail-div">
         <h2>{quizInfo.title}</h2>
         <div id="detail-image-div">

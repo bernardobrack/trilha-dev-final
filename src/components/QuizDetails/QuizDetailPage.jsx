@@ -15,7 +15,7 @@ export default function QuizDetailPage() {
         <div id="detail-page-content">
             {!isLoading && <>
                 <QuizDetail quizInfo={data}/>
-                <Button onClick={() => navigate(`/quiz/${id}`)} className="btn-medium">Fazer tentativa</Button>
+                <Button onClick={() => navigate(`/quiz/${id}/question/1`)} className="btn-medium">Fazer tentativa</Button>
             </>}
             {isLoading && <div className="center"><Loader /></div>}
         </div>

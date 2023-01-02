@@ -30,6 +30,7 @@ function App() {
           <Route path="/history" element={<HistoryPage />}/>
           <Route path="/details/:id" element={<QuizDetailPage />}/>
           <Route path="/quiz/:id" element={<QuizPage />}>
+            <Route path="question/:n" element={<p>sssss</p>}/>
           </Route>
         </Route>
         <Route path="*" element={<NotFound />} />
