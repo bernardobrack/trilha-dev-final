@@ -7,6 +7,9 @@
     height: 27.5rem;
     overflow: hidden;
 }
+.quiz-card-div:hover {
+    cursor: pointer;
+}
 
 .quiz-card-image{
     width: 55.2rem;

@@ -1,12 +1,13 @@
 import "./QuizCard.css";
 import Difficulty from "../Difficulty/Difficulty";
 import QuizHistory from "../QuizHistory/QuizHistory";
+import { useNavigate } from "react-router-dom";
 
 export default function QuizCard(props) {
-    
+    const navigate = useNavigate();
     const {quizInfo, history} = props;
     
-    return <div className="quiz-card-div">
+    return <div onClick={() => navigate(`/details/${quizInfo.id}`)} className="quiz-card-div">
         <div 
             className="quiz-card-image" 
             style={{backgroundImage: `url(${quizInfo.banner_image})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>

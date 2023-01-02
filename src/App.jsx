@@ -15,9 +15,9 @@ import { useContext } from 'react'
 import { AppContext } from './components/AppProvider/AppProvider'
 import HomeContent from './components/HomeContent/HomeContent'
 import HistoryPage from './components/HistoryPage/HistoryPage'
+import SimpleHeader from './components/SimpleHeader/SimpleHeader'
 
 function App() {
-  
   const {user} = useContext(AppContext);
   return (
     <div className="App">
@@ -25,13 +25,13 @@ function App() {
         <Route path="/" element={<LoginPage />}/>
         <Route path="/recover-password" element={<RecoverPassword />}/>
         <Route path="/register" element={<Register />}/>
-        <Route path="/home"element={<ProtectedRoute user={user}>
-          <Home></Home>
-        </ProtectedRoute>}>
+        <Route element={<ProtectedRoute user={user}/>}>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/history" element={<HistoryPage />}/>
+          <Route path="/details/:id" element={<SimpleHeader onPrevClick="/home"/>}>
+
+          </Route>
         </Route>
-        <Route path="/history" element={<ProtectedRoute user={user}>
-            <HistoryPage />
-          </ProtectedRoute>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
