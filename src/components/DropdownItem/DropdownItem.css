@@ -1,0 +1,15 @@
+.dropdown-item {
+    color: #000000;
+    height: 3.8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-item p {
+    margin: 1rem 0;
+}
+
+.dropdown-item hr {
+    color: var(--gray-ink);
+}
