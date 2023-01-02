@@ -15,6 +15,7 @@ import { useContext } from 'react'
 import { AppContext } from './components/AppProvider/AppProvider'
 import HistoryPage from './components/HistoryPage/HistoryPage'
 import QuizDetailPage from './components/QuizDetails/QuizDetailPage'
+import QuizPage from './components/QuizPage/QuizPage'
 
 function App() {
   const {user} = useContext(AppContext);
@@ -28,6 +29,8 @@ function App() {
           <Route path="/home" element={<Home/>}/>
           <Route path="/history" element={<HistoryPage />}/>
           <Route path="/details/:id" element={<QuizDetailPage />}/>
+          <Route path="/quiz/:id" element={<QuizPage />}>
+          </Route>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -20,3 +20,15 @@
     grid-auto-rows: 27.5rem;
     grid-template-columns: 55.4rem 55.4rem;
 }
+
+.center {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
