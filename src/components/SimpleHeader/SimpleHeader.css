@@ -1,6 +1,8 @@
 #simple-header-div {
     flex-direction: row;
     gap: 2.4rem;
+    position: relative;
+    z-index: 2;
 }
 
 header#simple {

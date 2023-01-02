@@ -1,0 +1,36 @@
+.results-div {
+    color: var(--dark-ink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7rem;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+}
+.results-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.results-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    max-width: 35.8rem;
+}
+.results-info p.p-large {
+    color: var(--dark-gray-ink);
+}
+
+#result-btn {
+    max-width: 35.8rem;
+}
