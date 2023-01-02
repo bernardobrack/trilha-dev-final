@@ -1,10 +1,8 @@
 import "./Question.css";
 import Option from "../Option/Option";
-import { useState } from "react";
 
-export default function Question({ questionInfo, questionNumber, questionAmount, setShowButton, showType, setShowType, disabled }) {
-    //console.log(questionInfo)
-    function handleOptionClick(index) {
+export default function Question({ setCorrect, questionInfo, questionNumber, questionAmount, setShowButton, showType, setShowType, disabled }) {
+    function handleOptionClick(index, correct) {
         if(disabled) return;
         setShowType(prev => {
             const newArray = [...prev];
@@ -13,6 +11,9 @@ export default function Question({ questionInfo, questionNumber, questionAmount,
             return newArray;
         });
         setShowButton(true);
+        if(correct) {
+            setCorrect(prev => prev+1);
+        }
     }
     return <div className="question-div">
         <div className="question-text">

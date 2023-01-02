@@ -10,9 +10,10 @@ export default function QuestionPage() {
     const navigate = useNavigate();
     const [showButton, setShowButton] = useState(false);
     const [showType, setShowType] = useState(Array(questions.data[n-1].answers.length).fill(false));
+    const [correct, setCorrect] = useState(0);
     function handleContinueClick() {
         if(questions.data.length == n) {
-            navigate("/home");
+            navigate(`/quiz/${questions.id}/results?correct=${correct}&total=${questions.data.length}`);
             return;
         }
         setShowButton(false);
@@ -20,7 +21,7 @@ export default function QuestionPage() {
         navigate(`/quiz/${questions.id}/question/${parseInt(n)+1}`);
     }
     return <div className="question-page-content">
-        <Question disabled={showButton} setShowType={setShowType} showType={showType} setShowButton={setShowButton} questionInfo={questions.data[n-1]} questionNumber={n} questionAmount={questions.data.length}/>
+        <Question setCorrect={setCorrect} disabled={showButton} setShowType={setShowType} showType={showType} setShowButton={setShowButton} questionInfo={questions.data[n-1]} questionNumber={n} questionAmount={questions.data.length}/>
         {showButton && <Button className="next-question-btn" onClick={handleContinueClick}>Continuar</Button>}
     </div>
         
