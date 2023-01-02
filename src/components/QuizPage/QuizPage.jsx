@@ -7,6 +7,6 @@ export default function QuizPage() {
     const { data, isLoading } = useFetch(`questions/${id}`);
     return <>
         <SimpleHeader onPrevClick={`/details/${id}`}/>
-        {!isLoading && <Outlet context={{data: data, n: n}}/>}
+        {!isLoading && <Outlet context={{questions: data, n: n}}/>}
     </>
 }

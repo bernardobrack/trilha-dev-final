@@ -31,3 +31,7 @@
     border: 2px solid var(--error-color);
     border-radius: 8px;
 }
+
+.disabled:hover {
+    cursor: default;
+}
