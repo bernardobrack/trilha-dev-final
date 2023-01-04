@@ -13,6 +13,8 @@ import QuizDetailPage from './components/QuizDetails/QuizDetailPage'
 import QuizPage from './components/QuizPage/QuizPage'
 import QuestionPage from './components/QuestionPage/QuestionPage'
 import ResultPage from './components/ResultPage/ResultPage'
+import UserAuth from './components/UserAuth/UserAuth'
+
 function App() {
   const {user} = useContext(AppContext);
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/" element={<LoginPage />}/>
         <Route path="/recover-password" element={<RecoverPassword />}/>
         <Route path="/register" element={<Register />}/>
+        <Route path="/auth" element={<UserAuth />}/>
         <Route element={<ProtectedRoute user={user}/>}>
           <Route path="/home" element={<Home/>}/>
           <Route path="/history" element={<HistoryPage />}/>
