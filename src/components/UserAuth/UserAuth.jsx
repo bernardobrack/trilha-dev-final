@@ -6,10 +6,6 @@ import { AppContext } from "../AppProvider/AppProvider";
 import "./UserAuth.css";
 
 export default function UserAuth() {
-    // Since it doesnt need any information from
-    // the form to authenticate the user, it doesnt
-    // receive any info, it just fetches the user
-    // info from the API.
     const [ params, setParams] = useSearchParams();
     const {user, setUser} = useContext(AppContext);
     const {data} = useSWR("https://my-json-server.typicode.com/higorpo/trilha-dev-json-server/profile", getUser);
