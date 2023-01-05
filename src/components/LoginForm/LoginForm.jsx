@@ -22,7 +22,7 @@ export default function LoginForm() {
     }
     function handleLoginSubmit(event) {
         event.preventDefault();
-        navigate(`/auth?email=${formData.email}&pwd=${formData.pwd}`);
+        navigate(`/auth`, {state: formData});
     }
     return <div id="login-form-div">
         <h1>Entrar</h1>
