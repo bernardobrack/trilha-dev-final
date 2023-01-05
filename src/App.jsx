@@ -6,15 +6,15 @@ import Register from './components/Register/Register'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import { useContext, lazy, Suspense } from 'react'
 import { AppContext } from './components/AppProvider/AppProvider'
-import HistoryPage from './components/HistoryPage/HistoryPage'
 import QuizDetailPage from './components/QuizDetails/QuizDetailPage'
 import QuizPage from './components/QuizPage/QuizPage'
-import QuestionPage from './components/QuestionPage/QuestionPage'
-import ResultPage from './components/ResultPage/ResultPage'
 import UserAuth from './components/UserAuth/UserAuth'
+import Home from './components/Home/Home'
 
 const NotFound = lazy(() => import('./components/NotFound/NotFound'))
-const Home = lazy(() => import('./components/Home/Home'))
+const HistoryPage = lazy(() => import('./components/HistoryPage/HistoryPage'))
+const QuestionPage = lazy(() => import('./components/QuestionPage/QuestionPage'))
+const ResultPage = lazy(() => import('./components/ResultPage/ResultPage'))
 
 function App() {
   const {user} = useContext(AppContext);
