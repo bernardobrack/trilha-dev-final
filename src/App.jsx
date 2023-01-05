@@ -10,6 +10,7 @@ import QuizDetailPage from './components/QuizDetails/QuizDetailPage'
 import QuizPage from './components/QuizPage/QuizPage'
 import UserAuth from './components/UserAuth/UserAuth'
 import Home from './components/Home/Home'
+import Loader from './components/Loader/Loader'
 
 const NotFound = lazy(() => import('./components/NotFound/NotFound'))
 const HistoryPage = lazy(() => import('./components/HistoryPage/HistoryPage'))
@@ -20,7 +21,7 @@ function App() {
   const {user} = useContext(AppContext);
   return (
     <div className="App">
-      <Suspense>  
+      <Suspense fallback={<Loader className="center"/>}>  
         <Routes>
           <Route path="/" element={<LoginPage />}/>
           <Route path="/recover-password" element={<RecoverPassword />}/>
