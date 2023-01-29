@@ -16,3 +16,12 @@
 .login-form-field {
     width: 55.2rem;
 }
+
+@media screen and (max-width: 600px) {
+    .login-form-field {
+        width: 27.6rem
+    }
+    .login-btn {
+        width: 27.6rem;
+    }
+}

@@ -9,3 +9,19 @@
     max-width: 144rem;
     height: 100vh;
 }
+
+@media screen and (max-width: 1200px) {
+    #login-page-image {
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #login-page-image {
+        display: none;
+    }
+
+    #login-page-div {
+        gap: 0;
+    }
+}
