@@ -8,3 +8,63 @@
 #home-page-grid {
     margin: 4.8rem 0;
 }
+
+@media screen and (max-width:1200px) {
+    #home-page-grid {
+        grid-template-columns: 100rem;
+        justify-items: center;
+    }
+    .quiz-card-div {
+        width: 70rem;
+    }
+
+    .quiz-card-image {
+        width: 70rem;
+    }
+    .header-content {
+        width: 100rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .header-content {
+        width: 70rem;
+    }
+    .search-input-div {
+        width: 15rem;
+    }
+    #header-navigation-container {
+        margin-bottom: 1rem;
+    }
+    .quiz-card-div {
+        width: 55.4rem;
+    }
+    .header-content {
+        width: 55.4rem;
+    }
+}
+
+@media screen and (max-width:586px) {
+    header h2 {
+        font-size: 2rem;
+    }
+    #header-navigation-container {
+        gap: 1rem;
+    }
+    #header-navigation-container p{
+        font-size: 1.1rem;
+    }
+    .search-input-div {
+        width: 11rem;
+        height: 3rem;
+    }
+    #header-navigation-container {
+        margin-bottom: 1rem;
+    }
+    .quiz-card-div {
+        width: 30.7rem;
+    }
+    .header-content {
+        width: 30.7rem;
+    }
+}

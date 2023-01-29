@@ -15,7 +15,7 @@ export default function RecoverPassword() {
         <form onSubmit={handleFormSubmit} id="recover-pwd-form">
             <h1>Recuperar senha</h1>
             <Input required type="email" id="recover-pwd-input" placeholder="Digite seu endereço de e-mail"/>
-            <Button type="submit">Enviar e-mail</Button>
+            <Button id="recover-pwd-btn" type="submit">Enviar e-mail</Button>
         </form>
     </div>
 }
